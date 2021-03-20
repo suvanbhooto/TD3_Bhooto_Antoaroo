@@ -10,7 +10,19 @@ def main():
 	i=(len(sys.argv)-1)
 	print("le nombre d'arguments : ",i)
 	
-	if (i==2):
+	
+	if (i==0):
+		n1=int(input("Inserer le premier argument : "))
+		n2=int(input("Inserer le deuxieme argument : "))
+		x = int (n1)
+		y = int (n2)
+		print(add_num(x,y))	
+	elif (i==1):
+		n1=int(input("Inserer le deuxieme argument : "))
+		x = int (sys.argv[1])
+		y = int (n1)
+		print(add_num(x,y))	
+	elif (i==2):
 		x = int (sys.argv[1])
 		y = int (sys.argv[2])
 		print(add_num(x,y))
