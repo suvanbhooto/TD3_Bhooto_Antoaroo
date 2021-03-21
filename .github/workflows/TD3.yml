@@ -1,0 +1,29 @@
+name: TD3
+
+on:
+  pull_request:
+  push:
+    branches:
+      -main
+      -dev
+  
+jobs:
+  test:
+    name: Running Units Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - users: action/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: action/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install
+      run: npm install
+    - name: Test
+      run: npm test
+      
+  
+  
+  
+  
